@@ -9,6 +9,7 @@
                     <div class="card-body card-dashboard">
                         <div class="text-center my-2">
                         <h2> Two-Factor Authentication</h2>
+                        <span> ( Use Google Authenticator App to scan QR Code and then put MFA code here)</span>
                         </div>
                         <div class="text-center qr-div">
                             {!! $qrCode !!}
