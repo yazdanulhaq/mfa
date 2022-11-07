@@ -24,7 +24,7 @@
                                 <form class="d-flex justify-content-center mt-2 text-center">
                                     <div class="col-md-3 me-2">
                                         <div class="form-group">
-                                            <input type="password" class="form-control code" name="code" placeholder="Enter Google Authenticator Code" >
+                                            <input type="password" class="form-control code" name="code" placeholder="Enter Google Authenticator Code" onkeypress="return isNumber(event)" >
                                             <input type="hidden" class="form-control secret" name="secret" value="{{ $secret }}">
                                         </div>
                                     </div>
@@ -43,6 +43,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
 <script>
+    function isNumber(evt) {
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        return true;
+    }
    
     $(document).ready(function(){
         $.LoadingOverlay("show");
