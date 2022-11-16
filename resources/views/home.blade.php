@@ -10,7 +10,7 @@
                         {{ __('Dashboard') }}
                     </div>
                     <div class="col-md-6 text-end">
-                        <a href="{{ route('enableMFA') }}">{{ __('Enable Multifactor Authentication') }}</a>
+                        <a href="{{ route('enableMFA') }}">{{ __('Multifactor Authentication') }}</a>
                     </div>
                 </div>
 
